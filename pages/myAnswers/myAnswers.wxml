@@ -1,0 +1,16 @@
+<view class="wrap">
+  <view wx:for="{{answerList}}" wx:key="{{index}}" data-item='{{item}}' class='allcontent'  catchtap='toQuession'>
+    <view class='con_wrap'>
+      <text class='title'>{{item.subject}}</text>
+      <view class='con_bot'>
+        <text>{{item.dateline}}，</text>
+        <text>{{item.post_count}}回答</text>
+      </view>
+    </view>
+  </view>
+<empty wx:if="{{!answerList}}"></empty>
+  
+  <!-- <view class='loadAll' wx:if="{{isLoadAll}}">
+    <text>已加载全部</text>
+  </view> -->
+</view>

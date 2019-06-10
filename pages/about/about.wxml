@@ -1,0 +1,12 @@
+<view class='wrap'>
+  <image class='about_logo' src="https://static.hrloo.com/hrloo56/wendamiapp/img/hrHome.png" mode="aspectFit"></image>
+
+  <view class='content'>
+  <text> 三茅问答是基于三茅网为企业HR量身打造的资讯门户，一个最前沿的HR信息交流窗口。用户提出的典型案例+达人们的经典解答周问答精华汇总的方式给职场HR答疑解惑。
+问答规则：
+1.提问仅限HR专业性的问题（HR工作、HR发展、案例等相关问题）。
+2.禁止涉及广告、黄反、灌水、冒充三茅管理人员等不文明行为，如发现以上行为，将删除该用户账号，严重者，将酌情封禁IP。</text>
+  </view>
+
+  <text class='tel'>联系方式：0755-27900000</text>
+</view>

@@ -1,0 +1,60 @@
+<!--components/qaList/qaList.wxml-->
+<view class='qa-list-layout'>
+
+  <view class="qa-list-item" wx:for="{{qaList}}" wx:key="{{index}}" data-item='{{item}}' catchtap='toQuestionDetail'>
+
+    <view class='user-area clearfix'>
+      <image src='{{item.ava_url}}'></image>
+      <view class='user-info'>
+        <view class='ui-1 clearfix'>
+          <text class='nickname'>{{item.nickname}}</text>
+          <text class='tip' wx:if="{{tab!=3&&!isSearch}}">回答了问题</text>
+          <text class='zd' style='font-size:26rpx' wx:if="{{item.toporder!=0&&item.is_star!=1}}">置顶问题</text>
+          <text class='gz' style='font-size:26rpx' wx:if="{{item.is_star==1&&item.toporder==0}}">我关注的问题</text>
+          <text class='zd' style='font-size:26rpx' wx:if="{{item.is_star==1&&item.toporder!=0}}">置顶问题</text>
+          <!-- <text class='gz'>我关注的问题</text> -->
+        </view>
+        <view class='view_label'>
+          <view class='labels clearfix' wx:if="{{!isSearch}}" wx:for="{{item.cate_name}}" wx:for-item="cate" wx:key="{{index}}">
+            <text class='label-item'>{{cate}}</text>
+          </view>
+          <view class='labels clearfix' wx:if="{{isSearch}}" wx:for="{{item.cate}}" wx:for-item="cate" wx:key="{{index}}">
+            <text class='label-item'>{{cate}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='tit'>{{item.subject}}</view>
+
+    <view class='intro' wx:if="{{!item.pl.voice_id&&!isSearch }}">{{item.pl.text}}</view>
+    <view class='intro' wx:if="{{isSearch}}">{{item.question}}</view>
+
+    <view class='ly' wx:if="{{item.pl.voice_id}}">
+      <text class='{{item.isPlay?"say":"default"}}' data-index='{{index}}' data-item='{{item}}' style='width:30%'>{{item.pl.voice.music_length}}s</text>
+    </view>
+    <view class='else clearfix' wx:if="{{tab!=3}}">
+
+      <text class='date' wx:if="{{isSearch}}">{{item.dateline}} 提问</text>
+      <text class='date' wx:if="{{!isSearch}}">{{item.dateline}} 回答</text>
+      
+
+
+      <text class='nums' wx:if="{{item.pl.zan_count<999&&item.pl.zan_count!=0}}">{{item.pl.zan_count}}点赞</text> 
+      <text class='nums' wx:if="{{item.pl.zan_count==0}}">点赞</text> 
+      <text class='nums' wx:if="{{item.pl.zan_count>=999}}">999+点赞</text> 
+      ·
+      <text class='nums' wx:if="{{item.pl.pl_count<999&&item.pl.pl_count!=0}}">{{item.pl.pl_count}}回复</text>
+      <text class='nums' wx:if="{{item.pl.pl_count>=999}}">999+回复</text>
+      <text class='nums' wx:if="{{item.pl.pl_count==0}}">回复</text>
+
+
+
+    </view>
+    <view class='else clearfix' wx:if="{{tab==3}}">
+      <text class='date'>{{item.view_count}}人看过</text>
+      <text class='date reply'>{{item.post_count}}条回答</text>
+    </view>
+
+  </view>
+</view>

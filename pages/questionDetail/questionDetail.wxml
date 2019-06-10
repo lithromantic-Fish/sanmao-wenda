@@ -1,0 +1,91 @@
+  <import src="../../wxParse/wxParse.wxml" />
+
+<view class='wrap'>
+
+  <view class='qa-list-layout'>
+
+    <view class="qa-list-item" >
+
+      <view class='user-area clearfix'>
+        <image src='{{thread.ava_url}}'></image>
+        <view class='user-info'>
+          <view class='ui-1 clearfix'>
+            <text class='nickname'>{{thread.nickname}}</text>
+
+            <text class='text_time'>{{thread.dateline}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='tit'>{{thread.subject}}</view>
+
+      <template style="font-size:200rpx" is="wxParse" data="{{wxParseData:article.nodes}}" />
+      <!-- <view class='ly' wx:if="{{thread.pl.voice_id}}">
+        <text class='default' data-item='{{thread}}' bindtap='playVoice' style='width:30%'>{{thread.pl.voice.music_length}}s</text>
+      </view> -->
+       <text class='self_q' wx:if="{{isSelf==1}}">收到{{thread.post_count}} 个回答</text>
+      <view class='else clearfix' wx:if="{{isSelf==0}}">
+        <text class='date'>{{thread.post_count}} 条回答</text>
+
+        <block wx:if="{{isLogin}}">
+          <view class='follow_q'  wx:if="{{thread.is_star==0}}" data-start='{{thread.is_star}}' catchtap='followQ'>
+            <text >关注问题</text>
+          </view>
+          <view  class='hasfollow_q' wx:if="{{thread.is_star!=0}}" data-start='{{thread.is_star}}' catchtap="followC">
+            <image src='https://static.hrloo.com/hrloo56/wendamiapp/img/ic_like.png'></image>
+            <text >已关注</text>
+          </view>
+        </block>
+
+        <block  wx:if="{{!isLogin}}">
+          <button  style='display:inline' open-type='getPhoneNumber' bindgetphonenumber="_getPhoneNumber">
+            <view class='follow_q'  wx:if="{{thread.is_star==0}}" data-start='{{thread.is_star}}'>
+              <text >关注问题</text>
+            </view>
+            <view  class='hasfollow_q' wx:if="{{thread.is_star!=0}}" data-start='{{thread.is_star}}' >
+              <image src='https://static.hrloo.com/hrloo56/wendamiapp/img/ic_like.png'></image>
+              <text >已关注</text>
+            </view>
+          </button>
+        </block>
+
+      </view>
+    </view>
+  </view>
+
+  <block wx:if="{{isLogin}}">
+  <view class='replyType'  wx:if="{{isSelf==0}}">
+    <view class='flex_voice' catchtap='toVoiceAnswer'>
+      <image style='width:40rpx;height:40rpx' src='https://static.hrloo.com/hrloo56/wendamiapp/img/ic_msg2_1.png'></image>
+      <text>我来答</text>
+    </view>
+    <view class='flex_text' catchtap='toTextAnswer'>
+        <image style='width:40rpx;height:40rpx' src='https://static.hrloo.com/hrloo56/wendamiapp/img/ic_text.png'></image>
+      <text>文字回答</text>
+    </view>
+  </view>
+  </block>
+
+  <block wx:if="{{!isLogin}}">
+  <button style='display:inline' open-type='getPhoneNumber' bindgetphonenumber="_getPhoneNumber">
+      <view class='replyType'  wx:if="{{isSelf==0}}">
+      <view class='flex_voice'>
+        <image style='width:40rpx;height:40rpx' src='https://static.hrloo.com/hrloo56/wendamiapp/img/ic_msg2_1.png'></image>
+        <text>我来答</text>
+      </view>
+      <view class='flex_text' >
+          <image style='width:40rpx;height:40rpx' src='https://static.hrloo.com/hrloo56/wendamiapp/img/ic_text.png'></image>
+        <text>文字回答</text>
+      </view>
+      </view>
+    </button>
+  </block>
+
+
+  <text class='text_view'>已有{{thread.view_count}}人围观</text>
+</view>
+<view>
+  <!-- 评论数组 -->
+  <qListDetail bind:updateDetailData="_updateDetailData"  isLogin="{{isLogin}}" plList="{{plList}}" questesId="{{questesId}}"></qListDetail>
+</view>
+<empty wx:if="{{!plList||plList.length==0}}"></empty>

@@ -1,0 +1,253 @@
+.pl-layout {
+}
+
+.pl-layout .show-inter-layout {
+  width: 690rpx;
+  height: 173rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/pl.jpg?v=1904') no-repeat 0 0;
+  background-size: 690rpx 173rpx;
+}
+
+.pl-data {
+  margin-top: 60rpx;
+}
+
+.pl-data .pl-tab {
+  height: 60rpx;
+  border-bottom: solid 1px #d3d3d3;
+}
+
+.pl-data .pl-tab text {
+  display: inline-block;
+  float: left;
+  position: relative;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.2;
+  height: 100%;
+}
+
+.pl-data .pl-tab text.active {
+  color: #0092ff;
+  font-weight: bold;
+}
+
+.pl-data .pl-tab text.active::after {
+  position: absolute;
+  left: 0;
+  bottom: -3rpx;
+  width: 100%;
+  height: 4rpx;
+  content: '';
+  background-color: #0092ff;
+}
+
+.pl-data .pl-tab text:nth-child(1) {
+  margin-right: 40rpx;
+}
+
+.pl-data-layout {
+  padding-top: 35rpx;
+}
+
+.pl-data-layout .pl-items {
+  margin-bottom: 35rpx;
+}
+
+.pl-items .item-l {
+  float: left;
+  width: 60rpx;
+}
+
+.pl-items .item-r {
+  margin-left: 60rpx;
+}
+
+.pl-items .item-l image {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+.pl-items .item-r .part-1 {
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+}
+
+.pl-items .item-r .part-1 text {
+  flex: 1;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.pl-items .item-r .part-1 text.nickname {
+  text-align: left;
+}
+
+.pl-items .item-r .part-1 text.dateline {
+  text-align: right;
+}
+
+.pl-items .item-r .part-2 {
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 42rpx;
+	letter-spacing: 0rpx;
+	color: #000000;
+  word-break:break-all;
+  word-wrap:break-word;
+}
+.pl-items .item-r .part-3 .text {
+  display: inline-block;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36rrpx;
+	letter-spacing: 0px;
+	color: #999999;
+}
+.pl-items .item-r .part-4 {
+  margin-top: 20rpx;
+	padding: 10rpx 20rpx;
+	background-color: #f1f2f1;
+}
+.pl-items .item-r .part-4 .sub-item {
+  word-break:break-all;
+  word-wrap:break-word;
+	font-size: 26rpx;
+	line-height: 34rpx;
+  margin: 20rpx 0;
+}
+.pl-items .item-r .part-4 .sub-item text:nth-child(1) {
+	color: #004171;
+}
+
+.pl-items .item-r .part-4 .sub-item text:nth-child(2) {
+	color: #222222;
+}
+
+.fixed-pllayout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 199;
+  background-color: #fff;
+}
+
+.fixed-pllayout .fp-layout {
+  padding: 30rpx;
+}
+
+.fixed-pllayout .fp-layout .fp-tt {
+  position: relative;
+}
+
+.fixed-pllayout .fp-layout .fp-tt ._tt {
+	font-size: 42rpx;
+	color: #000;
+}
+
+.fixed-pllayout .fp-layout .fp-tt ._ct {
+	font-size: 22rpx;
+	color: #999;
+  margin-top: 15rpx;
+}
+
+.fixed-pllayout .fp-layout .fp-tt ._ft {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 56rpx;
+  height: 34rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/course/icon_01.png') no-repeat center center;
+  background-size: 28rpx 17rpx;
+}
+
+.fixed-pllayout .inter-layout {
+  margin-top: 25rpx;
+  border: solid 1rpx #d3d3d3;
+}
+
+.fixed-pllayout .inter-layout .textarea {
+  width: 100%;
+  height: 183rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.fixed-pllayout .inter-layout .textarea textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 26rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 36rpx;
+  letter-spacing: 0;
+}
+
+.placlass {
+	color: #cccccc;
+}
+
+.fixed-pllayout .inter-layout .sub-btn {
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.fixed-pllayout .inter-layout .sub-btn text {
+  font-size: 22rpx;
+  letter-spacing: 0px;
+  color: #bbb;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+.fixed-pllayout .inter-layout .sub-btn .send-btn {
+  float: right;
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #0092ff;
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 0;
+  text-align: center;
+}
+
+.fixed-pllayout .inter-layout .sub-btn .send-btn.nosend {
+  background-color: #888;
+}
+
+.checkmore {
+  text-align: center
+}
+
+.checkmore text {
+  font-size: 22rpx;
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 25rpx;
+  padding: 0 30rpx;
+}
+
+
+
+button {
+  border: 0 none;
+  border-radius: 0;
+}
+
+button::after {
+  border: none;
+}

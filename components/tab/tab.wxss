@@ -1,0 +1,103 @@
+/* components/tab/tab.wxss */
+
+page {
+  padding-bottom: 96rpx;
+}
+
+.fixed-bottom {
+  position: fixed;
+  height: 96rpx;
+  width: 100%;
+  background-color: #fff;
+  border-top: solid 1rpx #bfbfc3;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.iphonex {
+  padding-bottom: 68rpx;
+}
+
+.fixed-bottom .fb-overly {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.fixed-bottom .item {
+  display: block;
+  flex: 1;
+  text-align: center;
+}
+
+.fixed-bottom .item text {
+  font-size: 20rpx;
+  color: #838383;
+  display: block;
+  padding-top: 60rpx;
+  line-height: 1;
+}
+
+.fixed-bottom .item.active text {
+  color: #0092ff;
+}
+
+.fixed-bottom .item.study text {
+  background: url('https://static.hrloo.com/hrloo56/wendamiapp/img/home.png') no-repeat center 15rpx;
+  background-size: 38rpx 38rpx;
+}
+
+.fixed-bottom .item.study.active text {
+  background: url('https://static.hrloo.com/hrloo56/wendamiapp/img/homeActive.png') no-repeat center 15rpx;
+  background-size: 38rpx 38rpx;
+}
+
+
+/* .publishQ{
+  background: url('https://static.hrloo.com/hrloo56/wendamiapp/img/btn_publish.png') no-repeat center 8rpx;
+  background-size: 54rpx 54rpx;
+} */
+.img_publish{
+  width:126rpx;
+height:126rpx;
+position:absolute;
+top:-17px;
+
+}
+.fixed-bottom .item.class text {
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/tab/banji@2x.png') no-repeat center 8rpx;
+  background-size: 54rpx 54rpx;
+}
+
+.fixed-bottom .item.class.active text {
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/tab/banji2@2x.png') no-repeat center 8rpx;
+  background-size: 54rpx 54rpx;
+}
+
+.fixed-bottom .item.mine text {
+  background: url('https://static.hrloo.com/hrloo56/wendamiapp/img/mine.png') no-repeat center 15rpx;
+  background-size: 38rpx 38rpx;
+}
+
+.fixed-bottom .item.mine.active text {
+  background: url('https://static.hrloo.com/hrloo56/wendamiapp/img/mineActive.png') no-repeat center 15rpx;
+  background-size: 38rpx 38rpx;
+}
+
+.fixed-bottom .item.kefu {
+  background: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.fixed-bottom .item.kefu::after {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.fixed-bottom .item.kefu text {
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/tab/kefu3x.png') no-repeat center 13rpx;
+  background-size: 34rpx 38rpx;
+}

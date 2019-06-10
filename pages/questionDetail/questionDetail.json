@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "search": "/components/search/search",
+    "empty": "/components/empty/empty",
+    "qListDetail": "/components/qListDetail/qListDetail"
+  }
+}

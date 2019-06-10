@@ -1,0 +1,16 @@
+<!--components/tab/tab.wxml-->
+<view class='fixed-bottom {{model.iphoneX?"iphonex":""}}'>
+  <view class='fb-overly'>
+    <navigator class='item study {{tabIndex == 1 ? "active" : ""}}' url='/pages/index/index' open-type='reLaunch' hover-class='none'>
+      <text>首页</text>
+    </navigator>
+    <navigator style='position:relative;display:flex;justify-content:center;' class='item publish {{tabIndex == 2 ? "active" : ""}}' url='/pages/publishQuesion/publishQuesion' open-type='navigate' hover-class='none'>
+
+      <image class=' item img_publish' src='https://static.hrloo.com/hrloo56/wendamiapp/img/btn_publish.png'></image>
+    </navigator>
+
+    <navigator class='item mine {{tabIndex == 3 ? "active" : ""}}' url='/pages/mine/mine' open-type='reLaunch' hover-class='none'>
+      <text>我的</text>
+    </navigator>
+  </view>
+</view>

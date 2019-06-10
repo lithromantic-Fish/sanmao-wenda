@@ -1,0 +1,52 @@
+<!--pages/publishQuesion/publishQuesion.wxml-->
+<view class='wrap'>
+  <view>
+    <view class='flex title_tips'>
+      <view class='pre_title '></view>
+      <text>标题</text>
+    </view>
+    <view>
+    <input class='input' placeholder-class="pla_text" maxlength='30' bindinput='publishTitle' placeholder-style="padding-left:29rpx" type='text' placeholder='请输入标题'></input>
+    </view>
+  </view>
+  <view>
+    <view class='flex title_tips'>
+      <view class='pre_title '></view>
+      <text>问题描述</text>
+    </view>
+    <textarea class='textarea'  placeholder-class="pla_text" bindinput='publishContent' placeholder-style="padding:30rpx" bindblur="bindTextAreaBlur" placeholder="详细的描述问题更容易得到准确的答案" />
+  </view>
+  <view>
+    <view class='flex title_tips'>
+      <view class='pre_title '></view>
+      <text>问题标签</text>
+      <text class='tips'>贴个标签更容易得到答案哦</text>
+    </view>
+
+    <!-- 标签 -->
+    <view class='labels-layout' wx:if="{{ !inputVal && (!searchResult || !searchResult.length)}}">
+      <!-- <view class='tt'>标签</view> -->
+      <view class='ct'>
+
+        <view class='{{item.id==44?"text_fin":"text"}}' wx:for="{{labels}}" wx:key="id" data-id='{{item.id}}' data-index="{{index}}" data-name='{{item.name}}' bindtap='_label'>
+
+          <view class='{{item.isSelect?"seled":"none"}}'>{{item.name}}</view>
+        </view>
+
+      </view>
+    </view>
+    <view class='text_tips'>
+      <text class='label_tips'>最多添加3个标签</text>
+    </view>
+
+  </view>
+</view>
+
+<form wx:if="{{isLogin}}" report-submit="true" bindsubmit='submit'> 
+  <button class='submit' form-type="submit">
+    <text>提交</text>
+  </button> 
+</form>
+<view wx:if="{{!isLogin}}">
+  <button class='submit' style='color:white; border-radius:0;' hover-class='none' open-type='getPhoneNumber' bindgetphonenumber="_getPhoneNumber">提交</button>
+</view>

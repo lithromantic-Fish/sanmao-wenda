@@ -1,0 +1,111 @@
+<!--components/qaList/qaList.wxml-->
+
+<view class='qa-list-layout' style='background-color:#F1F2F3;'>
+
+
+<!-- 评论列表 -->
+  <view class="qa-list-item" wx:for="{{plList}}" wx:key="{{index}}" data-item='{{item}}'>
+
+    <view class='user-area clearfix'>
+      <image src='{{item.ava_url}}'></image>
+      <view class='user-info'>
+        <view class='ui-1 clearfix'>
+          <text class='nickname'>{{item.nickname}}</text>
+            <text class='tip' wx:if="{{tab!=3&&!isSearch}}">回答了问题</text>
+        </view>
+        <view class='labels clearfix' wx:for="{{item.cate_name}}" wx:for-item="cate" wx:key="{{index}}">
+          <text class='label-item'>{{cate}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='tit'>{{item.subject}}</view>
+
+    <view class='intro' wx:if="{{!item.voice_id}}">{{item.text}}</view>
+
+    <view class='ly' wx:if="{{item.voice_id}}">
+      <text class='{{item.isPlay?"say":"default"}}' data-index='{{index}}'  data-item='{{item}}' bindtap='playVoice' style='width:30%'>{{item.music_length}}s</text>
+    </view>
+
+          <!-- ------------------------已登录的评论列表----------------------------- -->
+    <block wx:if="{{isLogin}}">
+      <view class='else clearfix' style='display:flex;justify-content:flex-start;align-items:center;width:100%;text-align:left'>
+          <text class='text_time'>{{item.dateline}}</text>
+
+            <view style='display:flex'>
+
+
+
+         <!-- ---------------------- button用于搜集formID ----------------->
+
+              <form report-submit="true" style='padding-right:8rpx' bindsubmit='like' data-index="{{index}}" data-pid='{{item.pid}}' data-item='{{item}}'>
+                <button wx:if="{{item.zan_count<999&&item.zan_count!=0}}" class='{{item.is_agree==0?"btn_like":"btn_hasLike"}}' form-type="submit">{{item.zan_count}}点赞</button>
+                <button wx:if="{{item.zan_count==0}}" class='{{item.is_agree==0?"btn_like":"btn_hasLike"}}' form-type="submit">点赞</button>
+                <button wx:if="{{item.zan_count>=999}}" class='{{item.is_agree==0?"btn_like":"btn_hasLike"}}' form-type="submit">{{item.zan_count}}点赞</button>
+
+              </form>
+
+        <!-- <text class='{{item.is_agree==0?"noLike":"hasLike"}}' catchtap='like' data-index="{{index}}" data-pid='{{item.pid}}' data-item='{{item}}'>{{item.zan_count}}点赞</text> -->
+              <text class='dot'>·</text>
+
+        <!---------------------------- 回复判断 ----------------->
+              <text  wx:if="{{item.pl_count<999&&item.pl_count!=0}}" class='nums' style='display:flex;align-items:center;padding-left:8rpx' catchtap='replay' data-name="{{item.nickname}}" data-index="{{index}}" data-item='{{item}}'>{{item.pl_count}}回复</text>
+              <text  wx:if="{{item.pl_count>=999}}" class='nums' style='display:flex;align-items:center;padding-left:8rpx' catchtap='replay' data-name="{{item.nickname}}" data-index="{{index}}" data-item='{{item}}'>{{item.pl_count}}回复</text>
+              <text  wx:if="{{item.pl_count==0}}" class='nums' style='display:flex;align-items:center;padding-left:8rpx' catchtap='replay' data-name="{{item.nickname}}" data-index="{{index}}" data-item='{{item}}'>回复</text>
+
+        </view>
+      </view>
+    </block>
+
+
+        <!-------------------------未登录的评论列表-------------------------->
+    <block wx:if="{{!isLogin}}">
+    <view>
+
+      <!----------------- 两个button，用于拉起手机授权 ----------------->
+        <view class='else clearfix'>
+
+         <button style='display:inline;  background-color:#fff; border:none' open-type='getPhoneNumber' bindgetphonenumber="_getPhoneNumber">
+          <text wx:if="{{item.zan_count<999&&item.zan_count!=0}}" class='{{item.is_agree==0?"btn_like":"btn_hasLike"}}' data-index="{{index}}" data-pid='{{item.pid}}' data-item='{{item}}'>{{item.zan_count}}点赞</text> 
+          <text wx:if="{{item.zan_count==0}}" class='{{item.is_agree==0?"btn_like":"btn_hasLike"}}' data-index="{{index}}" data-pid='{{item.pid}}' data-item='{{item}}'>点赞</text> 
+          <text wx:if="{{item.zan_count>=999}}"  class='{{item.is_agree==0?"btn_like":"btn_hasLike"}}' data-index="{{index}}" data-pid='{{item.pid}}' data-item='{{item}}'>999+点赞</text> ·
+      </button>
+
+      <button style='display:inline;  background-color:#fff; border:none' open-type='getPhoneNumber' bindgetphonenumber="_getPhoneNumber">
+          <text class='nums noLike' wx:if="{{item.pl_count<999&&item.pl_count!=0}}" data-name="{{item.nickname}}" data-index="{{index}}" data-item='{{item}}'>{{item.pl_count}}回复</text>
+          <text class='nums noLike' wx:if="{{item.pl_count>=999}}" data-name="{{item.nickname}}" data-index="{{index}}" data-item='{{item}}'>{{item.pl_count}}回复</text>
+          <text class='nums noLike' wx:if="{{item.pl_count==0}}" data-name="{{item.nickname}}" data-index="{{index}}" data-item='{{item}}'>回复</text>
+      </button>
+
+        </view>
+
+    </view>
+
+    </block>
+
+
+    <view class='pl_area' wx:if="{{item.second.count!=0}}">
+
+        <!-------------------------已登录的回复列表-------------------------->
+      <block wx:if="{{isLogin}}">
+        <view wx:for="{{item.second.data}}" style='margin-bottom:20rpx' wx:for-item="replay" wx:key="rep_index" wx:for-index="rep_index" data-name="{{replay.nickname}}" catchtap='replay' data-index="{{index}}" data-item='{{item}}' data-replay='{{replay}}' data-rep_index='{{rep_index}}'>
+          <text class='text_repN'>{{replay.nickname}} : </text>
+          <text class='text_tex'>{{replay.text}}</text>
+        </view>
+      </block>
+
+        <!-------------------------未登录的回复列表-------------------------->
+      <block wx:if="{{!isLogin}}">
+        <button class='btn_rep' open-type='getPhoneNumber' bindgetphonenumber="_getPhoneNumber">
+          <view wx:for="{{item.second.data}}" wx:for-item="replay" style='margin-bottom:20rpx' wx:key="rep_index" wx:for-index="rep_index" data-name="{{replay.nickname}}" data-index="{{index}}" data-item='{{item}}' data-replay='{{replay}}' data-rep_index='{{rep_index}}'>
+            <text class='text_repN'>{{replay.nickname}} : </text>
+            <text class='text_tex'>{{replay.text}}</text>
+          </view>
+        </button>
+      </block>
+
+      <text class='more' wx:if="{{item.second.pages!==1&&!noReplay}}" catchtap='getMore' data-pid='{{item.pid}}' data-index="{{index}}">展开更多</text>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,189 @@
+/* components/qaList/qaList.wxss */
+
+.qa-list-item {
+  padding: 30rpx 30rpx 20rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.qa-list-item:last-child {
+  margin: 0;
+}
+
+/* 头像 */
+
+.qa-list-item .user-area image {
+  float: left;
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #999;
+  border-radius: 50%;
+}
+
+/* 用户名 和 标签 */
+
+.user-info {
+  margin-left: 100rpx;
+}
+
+.user-info .ui-1 {
+  height: 45rpx;
+}
+
+.user-info .ui-1>text {
+  display: block;
+  line-height: 45rpx;
+  float: left;
+}
+
+.user-info .ui-1 .nickname {
+  font-size: 32rpx;
+  font-weight: bold;
+  overflow: hidden;
+  max-width: 45%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-info .ui-1 .tip {
+  font-size: 26rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+
+.user-info .ui-1 .zd, .user-info .ui-1 .gz {
+  float: right;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fe5432;
+}
+.gz{
+  font-size:32rpx;
+font-family:PingFang-SC-Bold;
+font-weight:bold;
+color:rgba(255,154,31,1);
+line-height:45rpx;
+}
+
+.user-info .ui-1 .gz {
+  color: #ff9a1f;
+}
+.reply{
+  margin-left: 30rpx;
+}
+
+/* label */
+
+.labels {
+  margin-top: 15rpx;
+}
+.view_label{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.labels .label-item {
+  float: left;
+  margin-right: 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #f7f7f7;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  padding: 0 15rpx;
+  color: #999;
+}
+
+/* 标题 */
+
+.tit {
+  margin-top: 20rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: r50px;
+}
+.tit text {
+  color:#FE5432
+}
+/* 简介 */
+
+.intro {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  line-height: 50rpx;
+  text-indent: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+/* 录音 */
+
+.ly {
+  margin: 10rpx 65rpx 0;
+}
+
+.default {
+  box-sizing: border-box;
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #e5f4ff url('https://static.hrloo.com/hrloo56/wendamiapp/img/ic_msg2.png') no-repeat 20rpx center /40rpx 40rpx;
+  border-radius: 40rpx;
+  padding-right: 40rpx;
+  text-align: right;
+  color: #0092ff;
+  font-size: 28rpx;
+}
+.say{
+    box-sizing: border-box;
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #e5f4ff url('https://static.hrloo.com/hrloo56/wendamiapp/img/ic_say.gif') no-repeat 30rpx center / 20rpx 26rpx;
+  border-radius: 40rpx;
+  padding-right: 40rpx;
+  text-align: right;
+  color: #0092ff;
+  font-size: 28rpx;
+}
+
+.pl_area{
+  background:rgba(247,247,247,1);
+}
+/* 底部时间 点赞/回复数 */
+
+.else {
+  margin-top: 20rpx;
+  text-align: right;
+  line-height: 40rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.else .date {
+  float: left;
+}
+
+.else .nums {
+  font-weight: bold;
+}
+
+/* 清除浮动 */
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.clearfix::before {
+  content: " ";
+  display: table;
+}

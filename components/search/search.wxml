@@ -1,0 +1,7 @@
+<!--components/search/search.wxml-->
+<view class='search-layout'>
+  <view class='search-ipt'>
+    <input type="text" value='{{inputVal}}' placeholder='{{placeholder}}' placeholder-class="placeholder-style" bindinput="_searchInput" disabled="{{isIndex?true:false}}"  bindconfirm="getSearchResult" confirm-type="search"></input>
+  </view>
+  <text wx:if="{{inputVal}}" class='text' bindtap='_searchInputCancel'>取消</text>
+</view>

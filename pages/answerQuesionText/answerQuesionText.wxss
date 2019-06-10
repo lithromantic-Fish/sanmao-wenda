@@ -1,0 +1,63 @@
+/* pages/answerQuesionText/answerQuesionText.wxss */
+
+.wrap {
+  background-color: #f1f2f3;
+  height: 100%;
+}
+
+.textArea {
+  background-color: #fff;
+  height: 420rpx;
+  width: 100%;
+  padding-top: 24rpx;
+  padding-left: 49rpx;
+}
+
+.p_text {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(187, 187, 187, 1);
+  line-height: 42rpx;
+}
+
+.btn_submit {
+  width: 690rpx;
+  height: 88rpx;
+  background: linear-gradient(90deg, rgba(0, 174, 255, 1) 0%, rgba(0, 120, 255, 1) 100%);
+  border-radius: 10px;
+  margin-top: 58rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 45rpx;
+}
+
+.wrap_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn_cancle {
+  width: 690rpx;
+  height: 88rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  border: 1rpx solid rgba(0, 146, 255, 1);
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(0, 146, 255, 1);
+  line-height: 45rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

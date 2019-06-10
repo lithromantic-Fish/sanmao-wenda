@@ -1,0 +1,139 @@
+<view class='pl-layout'>
+  <!-- 输入框 -->
+  <block wx:if="{{islogin}}">
+    <view 
+      wx:if="{{open == 0}}" 
+      data-index="-1"
+      data-tid="{{pldata.id}}" 
+      data-pid="0" 
+      data-topid="0" 
+      data-type="{{initPostData.type}}" 
+      bindtap='_gotoPL' 
+      class='show-inter-layout'></view>
+    <block wx:else>
+      <view wx:if="{{system == 0}}" bindtap='_showTip' class='show-inter-layout'></view>
+      <navigator wx:else class='show-inter-layout' hover-class='none' url='/pages/pay/pay?classid={{pldata.classid}}'></navigator>
+
+    </block>
+  </block>
+  <block wx:else>
+    <button class='show-inter-layout' open-type='getPhoneNumber' bindgetphonenumber="_getPhoneNumber"></button>
+  </block>
+
+  <view class='pl-data' wx:if="{{PLDATA.allhfcount>0}}">
+    <view class='pl-tab clearfix'>
+      <text 
+        data-type="1" 
+        bindtap='_plChangeTab'  
+        class='{{plTab.type == 1 ? "active" : ""}}'>全部评论（{{PLDATA.allhfcount}}）</text>
+      <text 
+        data-type="2" 
+        bindtap='_plChangeTab' 
+        wx:if="{{PLDATA.myhfcount > 0}}" 
+        class='{{plTab.type == 2 ? "active" : ""}}'>与我相关（{{PLDATA.myhfcount}}）</text>
+    </view>
+
+    <view class='pl-data-layout'>
+      <view 
+        wx:for="{{dataList}}" 
+        wx:key="index" 
+        class='pl-items clearfix'>
+        <view class='item-l'>
+          <image src='{{item.avatar}}'></image>
+        </view>
+        <view class='item-r'>
+          <view class='part-1'>
+            <text class='nickname'>{{item.nickname}}</text>
+            <text class='dateline'>{{item.date}}</text>
+          </view>
+          <view class='part-2'><text>{{item.text}}</text></view>
+          <view class='part-3'>
+            <block wx:if="{{islogin}}">
+              <text 
+                wx:if="{{open == 0}}" 
+                class='text' 
+                data-index="{{index}}"
+                data-tid="{{pldata.id}}" 
+                data-pid="{{item.id}}" 
+                data-topid="{{item.uid}}" 
+                data-type="{{initPostData.type}}" 
+                data-nickname="{{item.nickname}}"
+                bindtap='_gotoPL'>回复</text>
+
+              <block wx:else>
+                <text
+                  class='text'
+                  wx:if="{{system == 0}}" 
+                  bindtap='_showTip'>回复</text>
+                <navigator 
+                  wx:else 
+                  class='text' 
+                  hover-class='none' 
+                  url='/pages/pay/pay?classid={{pldata.classid}}'>回复</navigator>
+              </block>
+                
+            </block>
+            <block wx:else>
+              <button 
+                class='text' 
+                hover-class='none' 
+                open-type='getPhoneNumber' 
+                bindgetphonenumber="_getPhoneNumber">回复</button>
+            </block>              
+          </view>
+          <view class='part-4' wx:if="{{item.lists.length > 0}}">
+            <view 
+              wx:for="{{item.lists}}" 
+              wx:key="idx" 
+              wx:for-item="item2" 
+              class='sub-item'><text>{{item2.nickname}}</text><text>:{{item2.text}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='checkmore'>
+        <text 
+          bindtap='_getMore'
+          wx:if="{{plTab.type == 1 && PLDATA.allhfcount > dataList.length}}">查看更多</text>
+        <text 
+          bindtap='_getMore' 
+          wx:if="{{plTab.type == 2 && PLDATA.myhfcount > dataList.length}}">查看更多</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view class='fixed-pllayout'  hidden='{{!isShow}}' catchtouchmove='true'>
+  <view class='fp-layout'>
+    <view class='fp-tt'>
+      <view class='_tt'>课堂互动</view>
+      <view class='_ct'>互动分享，共同提升</view>
+      <view class='_ft' bindtap='_showHidePL'></view>
+    </view>
+    <view class='inter-layout'>
+      <view class='textarea'>
+        <textarea 
+          fixed="true"
+          maxlength="200" 
+          bindlinechange="_bindlinechange" 
+          bindconfirm="_bindconfirm"
+          placeholder="{{textarea.placeholder}}" 
+          bindinput="_bindinput" 
+          auto-focus="{{isShow}}" 
+          focus="{{isShow}}" 
+          placeholder-class="placlass"
+          value='{{textarea.value}}'>
+        </textarea>
+      </view>
+      <view class='sub-btn clearfix'>
+        <text>{{textarea.valueLength}}/200</text>
+        <view 
+          data-issend="{{button.issend}}" 
+          class="send-btn {{!button.issend ? 'nosend':''}}" 
+          bindtap='_sendPL'>发表</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,191 @@
+/* pages/publishQuesion/publishQuesion.wxss */
+
+.pre_title {
+  width: 8rpx;
+  height: 34rpx;
+  background: rgba(0, 146, 255, 1);
+  border-radius: 4rpx;
+  margin: 30rpx 30rpx 30rpx 0;
+}
+
+.pre_title text {
+  font-size: 34rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 48rpx;
+}
+
+.flex {
+  display: flex;
+}
+
+.title_tips {
+  align-items: center;
+}
+
+.wrap {
+  margin: 30rpx;
+}
+
+.input {
+  padding: 8rpx 0 0 20rpx;
+  width: 690rpx;
+  height: 70rpx;
+  border-radius: 8rpx;
+  border: 1rpx solid rgba(211, 211, 211, 1);
+  background: rgba(247, 247, 247, 1);
+  box-sizing: border-box;
+
+}
+
+.pla_text {
+  font-size: 30rpx;
+  color: rgba(187, 187, 187, 1);
+  font-family: PingFang-SC-Medium;
+}
+
+textarea {
+  padding: 20rpx;
+  width: 690rpx;
+  height: 252rpx;
+  box-sizing: border-box;
+  background: rgba(247, 247, 247, 1);
+  border-radius: 8rpx;
+  border: 1rpx solid rgba(211, 211, 211, 1);
+}
+
+.tips {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  line-height: 40rpx;
+  margin-left: 24rpx;
+}
+.label{
+   display: flex;
+   flex-direction: column;
+   padding-bottom:130rpx;
+
+}
+.label_line{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50rpx;
+}
+.label_item {
+  width: 210rpx;
+  height: 60rpx;
+  background: rgba(247, 247, 247, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.label_item_select{
+width: 210rpx;
+  height: 60rpx;
+  background:rgb(228, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.label_item text {
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
+  line-height: 40rpx;
+  background-color: rgba(247, 247, 247, 1)
+}
+.lable_tips{
+  font-size:28rpx;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(187,187,187,1);
+line-height:40rpx;
+}
+.submit{
+  width:100%;
+height:98rpx;
+background:linear-gradient(90deg,rgba(0,174,255,1) 0%,rgba(0,120,255,1) 100%);
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+bottom: 0;
+
+}
+.submit text{
+  font-size:32rpx;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(255,255,255,1);
+line-height:45rpx;
+
+}
+/* 标签 */
+
+.labels-layout {
+  padding: 11rpx 0 20rpx 20rpx;
+}
+
+.labels-layout .tt {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 48rpx;
+}
+
+.labels-layout .ct {
+  display: flex;
+  flex-flow: wrap;
+  text-align: center;
+}
+
+.text {
+  width: 30%;
+  height: 60rpx;
+  line-height: 60rpx;
+  background:rgba(247,247,247,1);
+  border-radius: 8rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: rgba(102, 102, 102, 1);
+  margin: 20rpx 20rpx 0 0;
+}
+
+.text_fin {
+   width: 250rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background:rgba(247,247,247,1);
+  border-radius: 8rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: rgba(102, 102, 102, 1);
+  margin: 20rpx 20rpx 0 0;
+}
+.label_tips{
+  font-size:28rpx;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(187,187,187,1);
+line-height:40rpx;
+}
+.text_tips{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center
+}
+.seled{
+  color: white;
+  border-radius:8rpx;
+  background-color: rgba(0,174,255,1)
+}
+.none{
+  color: rgba(102, 102, 102, 1)!important
+}

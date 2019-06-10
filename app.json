@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/publishQuesion/publishQuesion",
+    "pages/myFollowQuestion/myFollowQuestion",
+    "pages/myQuestion/myQuestion",
+    "pages/myMsg/myMsg",
+    "pages/myAnswers/myAnswers",
+    "pages/about/about",
+    "pages/answerQuesion/answerQuesion",
+    "pages/answerQuesionText/answerQuesionText",
+    "pages/questionDetail/questionDetail",
+    "pages/replay/replay"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0092ff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "navigateToMiniProgramAppIdList": [
+    "wxef50a246a3e8c480",
+    "wx1caca67f44e12c37",
+    "wx3f49a6726fbb5a6c",
+    "wx5a3a7366fd07e119"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

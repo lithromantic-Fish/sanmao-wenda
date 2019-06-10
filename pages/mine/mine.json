@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "fixed": "/components/fixed/fixed",
+    "tab": "/components/tab/tab"
+  }
+}

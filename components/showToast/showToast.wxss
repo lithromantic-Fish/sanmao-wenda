@@ -1,0 +1,38 @@
+.showloading_k{
+  margin-top: -100rpx;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.showloading_k image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.showloading_k text{
+  margin-top: 20rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+.showloadingMaskZ{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999999999;
+}
+.showloading{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+}

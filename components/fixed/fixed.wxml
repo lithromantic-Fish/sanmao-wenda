@@ -1,0 +1,9 @@
+<!--components/fixed/fixed.wxml-->
+<view class='fixed-btns'>
+  <view class='fx-item bg-music' wx:if="{{isBackgroundMusic}}">
+    <image src='{{bgMusic.avaurl}}'></image>
+    <navigator url='{{bgMusic.pageurl}}' hover-class='none'>
+      <image src='https://static.hrloo.com/hrloo56/classminiapp/img/course/music.gif'></image>
+    </navigator>
+  </view>
+</view>

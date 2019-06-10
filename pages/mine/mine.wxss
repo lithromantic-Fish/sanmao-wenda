@@ -1,0 +1,223 @@
+/* pages/mine/mine.wxss */
+
+.container {
+  min-height: 100%;
+  background-color: #f1f2f3;
+}
+
+.user-info {
+  background-color: #fff;
+  padding: 40rpx 30rpx;
+  position: relative;
+}
+
+.user-info image {
+  display: block;
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.user-info .info {
+  height: 100%;
+  margin-left: 140rpx;
+}
+
+.user-info .info .item {
+  display: flex;
+  margin-bottom: 5rpx;
+}
+
+.user-info .info .item text {
+  flex: 1;
+}
+
+.user-info .name {
+  padding-top: 5rpx;
+  display: inline-block;
+  font-size: 32rpx;
+  color: #000;
+}
+
+.user-info .number {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #a9a9a9;
+}
+
+.user-info .yk {
+  display: inline-block;
+  font-size: 32rpx;
+  color: #000;
+  padding-top: 40rpx;
+}
+
+.user-info navigator.change-account {
+  position: absolute;
+  right: 0;
+  top: 30rpx;
+  z-index: 2;
+  padding: 0 20rpx 0 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: #aaa;
+  background-color: #f2f2f2;
+  border-radius: 25rpx 0rpx 0rpx 25rpx;
+  text-align: center;
+}
+
+.user-info navigator.change-account.tolr {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.user-info navigator.change-account span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  padding-right: 20rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/icon_05.png') no-repeat right center;
+  background-size: 10rpx 19rpx;
+}
+
+.items {
+  padding-left: 30rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.items .item {
+  height: 100rpx;
+  padding-right: 30rpx !important;
+  border-bottom: 1rpx solid #e5e5e5 !important;
+}
+
+.items .item:last-child {
+  border-bottom: 0 !important;
+}
+
+.items .item .tt {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #000;
+  padding-left: 50rpx;
+}
+
+.items .item .ct {
+  float: right;
+  width: 60%;
+  background: url(https://static.hrloo.com/hrloo56/classminiapp/img/mine/icon_00.png) no-repeat right center;
+  background-size: 16rpx 27rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  color: #ddd;
+  padding-right: 45rpx !important;
+  text-align: right;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+
+}
+.redDos{
+  width:14rpx;
+  height:14rpx;
+  background:rgba(254,84,50,1);
+  border-radius:10rpx;
+
+}
+
+button {
+  display: block;
+  background-color: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+button::after {
+  border: none;
+}
+
+.items .item.button::after {
+  border: none !important;
+}
+
+.items .item .tt.message {
+  background: url(https://static.hrloo.com/hrloo56/wendamiapp/img/mine/ic_msg1.png) no-repeat 0 center;
+  background-size: 36rpx 36rpx;
+}
+
+.items .item .tt.ask {
+  background: url(https://static.hrloo.com/hrloo56/wendamiapp/img/mine/ic_question.png) no-repeat 0 center;
+   background-size: 36rpx 36rpx;
+}
+
+.items .item .tt.follow {
+  background: url(https://static.hrloo.com/hrloo56/wendamiapp/img/mine/ic_sub.png) no-repeat 0 center;
+  background-size: 36rpx 36rpx;
+}
+
+.items .item .tt.quesion {
+  background: url(https://static.hrloo.com/hrloo56/wendamiapp/img/mine/ic_anwser.png) no-repeat 0 center;
+  background-size: 36rpx 36rpx;
+}
+
+.items .item .tt.mymsg {
+  background: url(https://static.hrloo.com/hrloo56/classminiapp/img/mine/icon_05.png) no-repeat 0 center;
+  background-size: 36rpx 30rpx;
+}
+
+.items .item .tt.about {
+  background: url(https://static.hrloo.com/hrloo56/wendamiapp/img/mine/ic_about.png) no-repeat 0 center;
+  background-size: 36rpx 36rpx;
+}
+.line{
+  width: 668rpx;
+  height:2rpx;
+  background:rgba(229,229,229,1);
+  margin-left: 55rpx;
+  overflow-x:hidden;
+}
+
+.items .item .ct i.msg {
+  display: inline-block;
+  width: 12rpx;
+  height: 12rpx;
+  background-color: #f12c20;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.about {
+  padding: 50rpx 30rpx;
+}
+
+.about .tt {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.about .ct {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 30rpx;
+}
+
+.about .ct .item {
+  float: left;
+  margin-right: 50rpx;
+}
+
+.about .ct .item image {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto 20rpx;
+}
+
+/* .about .ct .item {
+  background: none;
+} */

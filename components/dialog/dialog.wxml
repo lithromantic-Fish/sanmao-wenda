@@ -1,0 +1,32 @@
+<!--components/Dialog/dialog.wxml-->
+<view class='wx_dialog_container' hidden="{{!isShow}}" catchtouchmove='true'>
+  <view class='wx-mask'></view>
+  <view class='wx-dialog'>
+    <view class="wx-dialog-content">
+      <image class='img-1' wx:if="{{popupType != 3}}" src='https://static.hrloo.com/hrloo56/classminiapp/img/dialog/icon_01.png'></image>
+      <image class='img-1' wx:if="{{popupType == 3}}" src='https://static.hrloo.com/hrloo56/classminiapp/img/dialog/icon_02.png'></image>
+      <view class='tit'>
+        <text wx:if="{{popupType == 1}}">加入班级</text>
+        <text wx:elif="{{popupType == 2}}">欢迎来到三茅班级</text>
+        <text wx:elif="{{popupType == 3}}">成功加入班级</text>
+      </view>
+      <view class='intro'>
+        <text wx:if="{{popupType == 1}}">加入班级即可解锁</text>
+        <text wx:elif="{{popupType == 2}}">这是个HR专属的知识充电站</text>
+        <text wx:elif="{{popupType == 3}}">已解锁班级完整内容</text>
+      </view>
+      <block wx:if="{{popupType == 1}}">
+        <navigator wx:if="{{isLogin}}" class='btn' url='/pages/pay/pay?id={{optionsData.id}}&classid={{optionsData.classid}}'>立即加入</navigator>
+        <button wx:else class='btn' open-type='getPhoneNumber' bindgetphonenumber="_getPhoneNumber">立即加入</button>
+      </block>
+      <block wx:elif="{{popupType == 2}}">
+        <navigator class='btn' open-type='navigate' url='/pages/login/login?back=1'>登录/注册</navigator>
+      </block>
+      <block wx:elif="{{popupType == 3}}">
+        <view class='btn' bindtap='_iKnow'>我知道了</view>
+      </block>
+
+    </view>
+    <view hidden='{{popupType == 3}}' class='close-btn' bindtap='hideDialog'></view>
+  </view>
+</view>

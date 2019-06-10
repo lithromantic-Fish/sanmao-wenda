@@ -1,0 +1,21 @@
+<!--pages/search/search.wxml-->
+<search bind:getSearchValue="_getSearchValue" inputVal="{{inputVal}}"></search>
+<!-- 标签 -->
+<view class='labels-layout' wx:if="{{ !inputVal && (!qaList || !qaList.length)}}">
+  <view class='tt'>标签</view>
+  <view class='ct'>
+    <text 
+      wx:for="{{labels}}" 
+      wx:key="id" 
+      data-id='{{item.id}}' 
+      data-index="{{index}}"
+      data-name='{{item.name}}'
+      bindtap='_label'
+      class='text {{index%3 == 2 ? "mr0" : ""}}'>{{item.name}}</text>
+  </view>
+</view>
+
+<qaList qaList="{{qaList}}" isSearch="true"></qaList>
+
+
+<empty wx:if="{{ inputVal && (!qaList || qaList.length==0)}}"></empty>

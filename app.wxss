@@ -1,0 +1,34 @@
+page {
+  max-width: 750rpx;
+  margin: 0 auto;
+  height: 100%;
+  font-family: "PingFangSC-Regular",
+                 "Microsoft Yahei",
+                 -apple-system-font,
+                 "Helvetica Neue",
+                 Helvetica,
+                 sans-serif !important;
+  font-weight: normal;
+  color: #333;
+  /* background-color: #f0f2f5; */
+}
+
+button {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+cover-view {
+  line-height: normal;
+}
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.clearfix::before {
+  content: " ";
+  display: table;
+}

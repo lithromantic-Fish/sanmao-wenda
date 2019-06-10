@@ -1,0 +1,36 @@
+/* components/search/search.wxss */
+
+.search-layout {
+  padding: 30rpx;
+  background-color: #0092ff;
+  display: flex;
+  font-size: 30rpx;
+}
+
+.search-layout .search-ipt {
+  padding: 10rpx 10rpx 10rpx 60rpx;
+  background: #fff url('https://static.hrloo.com/hrloo56/wendamiapp/img/ic_search.png') no-repeat 20rpx center / 29rpx 29rpx;
+  border-radius: 8rpx;
+  border: 1px solid rgba(225, 225, 225, 1);
+  flex: 6;
+}
+
+.search-layout .search-ipt input {
+  display: block;
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-weight: 500;
+}
+
+.search-layout .text {
+  height: 70rpx;
+  line-height: 70rpx;
+  flex: 1;
+  color: #fff;
+  text-align: right;
+}
+
+.placeholder-style {
+  color: #bbb !important;
+}

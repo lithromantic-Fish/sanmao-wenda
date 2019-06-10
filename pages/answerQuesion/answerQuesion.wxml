@@ -1,0 +1,28 @@
+<!--pages/answerQuesion/answerQuesion.wxml-->
+
+<view >
+  <view class='wrap_question'  catchtouchmove="true">
+  <showToast wx:if="{{isShowToast}}"></showToast>
+
+    <image bindlongpress="sayVoice"  bindtouchmove="touchMove" bindtouchstart="touchStart" bindtouchend="touchEnd" src='https://static.hrloo.com/hrloo56/wendamiapp/img/sayVoice.png'></image>
+    <text catchtap='upload'>语音回答，长按说话</text>
+  </view>
+  <view class='view_peo'>
+    已有{{view_count}}人围观
+  </view>
+  <view class='item_answer' wx:for="{{voiceList}}" wx:key="{{index}}">
+      <view class='ly'>
+      <text class='{{isPlay?"say":"default"}}' data-item="{{item}}" catchtap='palyVocie'  style='width:30%'>{{music_length}}</text>
+      <image catchtap='deleteVocie'  data-item="{{item}}" src='https://static.hrloo.com/hrloo56/wendamiapp/img/ic_del.png'></image>
+    </view>
+      <view class='text_time'>
+        <text>{{time}}</text>
+      </view>
+  
+  </view>
+      <form report-submit="true"  bindsubmit="submit" >
+      <button class='submit' form-type='submit'>
+        <text>提交</text>
+      </button>
+    </form>
+</view>

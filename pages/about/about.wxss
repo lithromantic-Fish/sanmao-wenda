@@ -1,0 +1,32 @@
+.about_logo{
+  width:144rpx;
+height:144rpx;
+background:rgba(216,216,216,1);
+border-radius:16rpx;
+margin-top: 100rpx;
+margin-bottom: 70rpx
+}
+.content{
+  width:609rpx;
+height:619rpx;
+font-size:30rpx;
+font-family:PingFang-SC-Regular;
+font-weight:400;
+color:rgba(51,51,51,1);
+line-height:68rpx;
+margin-bottom: 168rpx
+}
+.tel{
+  font-size:28rpx;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(153,153,153,1);
+line-height:68rpx;
+}
+.wrap{
+  display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+}

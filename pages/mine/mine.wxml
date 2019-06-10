@@ -1,0 +1,170 @@
+<!--pages/mine/mine.wxml-->
+
+<view class='container'>
+  <block wx:if="{{PAGE}}">
+
+  <view wx:if="{{isLogin}}">
+      <view class='user-info clearfix'>
+        <block >
+          <image src='{{loginData.avaurl}}'></image>
+          <view class='info'>
+            <view class='item'>
+              <text class='name'>{{loginData.nickname}}</text>
+            </view>
+            <view class='item'>
+              <text class='number' data-type="1" bindtap='_copy'>学号: {{loginData.studentid}}</text>
+              <text class='number' data-type="2" bindtap='_copy'>手机: {{loginData.mobile}}</text>
+            </view>
+            <view class='item'>
+              <text class='number' data-type="3" bindtap='_copy'>邮箱: {{loginData.email}}</text>
+            </view>
+          </view>
+        </block>
+       
+        <navigator url='/pages/login/login?back=1' class='change-account {{isLogin?"":"tolr"}}'>
+          <span>{{isLogin ? "换账号" : "登录/注册"}}</span>
+        </navigator>
+      </view>
+      <view class='items'>
+        <navigator url='/pages/myFollowQuestion/myFollowQuestion' open-type='navigate' hover-class='none'>
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt follow'>我关注的问题</text>
+            <view class='ct'>
+              <!-- <view class='redDos' wx:if="{{starCount!=0}}"></view> -->
+
+            </view>
+          </button>
+        </navigator>
+        <view class='line'></view>
+        <navigator url='/pages/myQuestion/myQuestion' open-type='navigate' hover-class='none'>
+
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt ask'>我的提问</text>
+            <view class='ct'>
+              <!-- <view class='redDos' wx:if="{{questCount!=0}}"></view> -->
+            </view>
+          </button>
+        </navigator>
+        <view class='line'></view>
+
+        <navigator url='/pages/myMsg/myMsg' open-type='navigate' hover-class='none'>
+
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt message'>我的消息</text>
+            <view class='ct'>
+              <!-- <view class='redDos' wx:if="{{msgCount!=0}}"></view> -->
+            </view>
+          </button>
+        </navigator>
+        <view class='line'></view>
+
+        <navigator url='/pages/myAnswers/myAnswers' open-type='navigate' hover-class='none'>
+
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt quesion'>我的回答</text>
+            <view class='ct'>
+              <!-- <view class='redDos'></view> -->
+            </view>
+          </button>
+        </navigator>
+        <view class='line'></view>
+
+        <navigator url='/pages/about/about' open-type='navigate' hover-class='none'>
+
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt about'>关于三茅问答</text>
+          </button>
+        </navigator>
+
+      </view>
+  </view>
+
+
+
+      <view class='user-info clearfix' wx:if="{{!isLogin}}">
+        <block>
+          <image src='https://static.hrloo.com/hrloo56/classminiapp/img/mine/icon_04_1.png'></image>
+          <view class='info'>
+            <text class='yk'>游客</text>
+          </view>
+        </block>
+      </view>
+
+    <button open-type='getPhoneNumber' bindgetphonenumber="_getPhoneNumber" wx:if="{{!isLogin}}">
+
+      <view class='items'>
+        <navigator url='/pages/myFollowQuestion/myFollowQuestion' open-type='navigate' hover-class='none'>
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt follow'>我关注的问题</text>
+            <view class='ct'>
+              <!-- <view class='redDos' wx:if="{{starCount!=0}}"></view> -->
+
+            </view>
+          </button>
+        </navigator>
+        <view class='line'></view>
+        <navigator url='/pages/myQuestion/myQuestion' open-type='navigate' hover-class='none'>
+
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt ask'>我的提问</text>
+            <view class='ct'>
+              <!-- <view class='redDos' wx:if="{{questCount!=0}}"></view> -->
+            </view>
+          </button>
+        </navigator>
+        <view class='line'></view>
+
+        <navigator url='/pages/myMsg/myMsg' open-type='navigate' hover-class='none'>
+
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt message'>我的消息</text>
+            <view class='ct'>
+              <!-- <view class='redDos' wx:if="{{msgCount!=0}}"></view> -->
+            </view>
+          </button>
+        </navigator>
+        <view class='line'></view>
+
+        <navigator url='/pages/myAnswers/myAnswers' open-type='navigate' hover-class='none'>
+
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt quesion'>我的回答</text>
+            <view class='ct'>
+              <!-- <view class='redDos'></view> -->
+            </view>
+          </button>
+        </navigator>
+        <view class='line'></view>
+
+        <navigator url='/pages/about/about' open-type='navigate' hover-class='none'>
+
+          <button class='item clearfix' hover-class='none'>
+            <text class='tt about'>关于三茅问答</text>
+          </button>
+        </navigator>
+
+      </view>
+    </button>
+
+      <view class='about' wx:if="{{ABOUT}}">
+        <view class='tt'>相关小程序</view>
+        <view class='ct clearfix'>
+          <view class='item hrquan' bindtap='openMiniApp' data-appid="wx3f49a6726fbb5a6c">
+            <image src='https://static.hrloo.com/hrloo56/classminiapp/img/mine/logo_01.png'></image>
+            <text>三茅HR圈</text>
+          </view>
+          <view class='item hrzl' wx:if="{{false}}" bindtap='openMiniApp' data-appid="wx1caca67f44e12c37">
+            <image src='https://static.hrloo.com/hrloo56/classminiapp/img/mine/logo_02.png'></image>
+          </view>
+          <view class='item hrzp' bindtap='openMiniApp' data-appid="wxef50a246a3e8c480">
+            <image src='https://static.hrloo.com/hrloo56/classminiapp/img/mine/logo_03.png'></image>
+            <text>三茅招聘</text>
+          </view>
+        </view>
+      </view>
+
+      <view style='height:164rpx;'></view>
+  </block>
+</view>
+<tab tabIndex="3"></tab>
+<fixed></fixed>

@@ -1,0 +1,277 @@
+/* pages/login/login.wxss */
+.containor {
+  min-height: 100%;
+  background: #f1f2f3 url('https://static.hrloo.com/hrloo56/classminiapp/img/top_bg_01.png') no-repeat center top;
+  background-size: 100% auto;
+}
+
+.logo {
+  padding: 80rpx 0 180rpx;
+  text-align: center;
+}
+
+.logo image {
+  width: 292rpx;
+  height: 68rpx;
+}
+
+.login-way {
+  width: 690rpx;
+  margin: 0 auto;
+  position: relative;
+}
+
+.login-way .ways {
+  font-size: 28rpx;
+}
+
+.login-way .ways text {
+  color: #0092ff;
+  margin-right: 25rpx;
+}
+
+.login-way .ways i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -3rpx;
+  width: 28rpx;
+  height: 28rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/login/icon_04.png') no-repeat center center;
+  background-size: 15rpx 10rpx;
+  transition: All 0.3s ease-in-out;
+}
+
+.login-way .ways i.sd {
+  transform: rotate(180deg);
+}
+
+.login-way .ways-list {
+  position: absolute;
+  top: 48rpx;
+  left: 120rpx;
+  width: 300rpx;
+  background-color: #fff;
+  box-shadow: 0px 0px 6rpx 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5rpx;
+  z-index: 9;
+}
+
+.login-way .ways-list::after {
+  position: absolute;
+  left: 50%;
+  top: -12rpx;
+  transform: translate(-50%,0);
+  content: ' ';
+  width: 40rpx;
+  height: 14rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/login/icon_05.png') no-repeat 0 0;
+  background-size: 40rpx 14rpx;
+  z-index: 10;
+
+}
+
+.login-way .ways-list .item {
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #000;
+  border-bottom: solid 1rpx #e5e5e5;
+}
+
+.login-way .ways-list .item.sd {
+  color: #0092ff;
+}
+
+.login-way .ways-list .item:last-child {
+  border: 0 none;
+}
+
+.fn-area {
+  width: 690rpx;
+  margin: 40rpx auto 0;
+  overflow: hidden;
+}
+
+.fn-items {
+  background-color: #fff;
+  border-radius: 10rpx;
+  border: solid 1rpx #d8d8d8;
+}
+
+.fn-items .fn-item {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 80rpx;
+  padding-right: 30rpx;
+  position: relative;
+}
+
+.fn-items .fn-item input {
+  float: left;
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+  color: #000;
+  font-size: 30rpx;
+}
+
+.p-class {
+  color: #ccc;
+}
+
+.fn-items .fn-item.mobile input,
+.fn-items .fn-item.email input,
+.fn-items .fn-item.password input {
+  width: 100%;
+}
+
+/* .fn-items .fn-item.img-code input,
+.fn-items .fn-item.msg-code input {
+  width: 60%;
+} */
+
+.fn-items .fn-item::before {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  content: ' ';
+}
+
+.fn-items .fn-item.mobile::before {
+  left: 34rpx;
+  width: 24rpx;
+  height: 36rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/login/icon_01.png') no-repeat 0 0;
+  background-size: 24rpx 36rpx;
+}
+
+.fn-items .fn-item.img-code::before {
+  left: 31rpx;
+  width: 30rpx;
+  height: 32rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/login/icon_02.png') no-repeat 0 0;
+  background-size: 30rpx 32rpx;
+}
+
+.fn-items .fn-item.msg-code::before {
+  left: 30rpx;
+  width: 32rpx;
+  height: 24rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/login/icon_03.png') no-repeat 0 0;
+  background-size: 32rpx 24rpx;
+}
+
+.fn-items .fn-item.password::before {
+  left: 30rpx;
+  width: 28rpx;
+  height: 32rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/login/icon_06.png') no-repeat 0 0;
+  background-size: 28rpx 32rpx;
+}
+
+.fn-items .fn-item.student::before {
+  left: 30rpx;
+  width: 28rpx;
+  height: 32rpx;
+  background: url('https://static.hrloo.com/hrloo56/classminiapp/img/login/icon_07.png') no-repeat 0 0;
+  background-size: 28rpx 32rpx;
+}
+
+.bt-line {
+  border-top: solid 1rpx #d8d8d8;
+}
+
+.change-img {
+  /* float: right; */
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.change-img .image-code {
+  display: inline-block;
+  vertical-align: middle;
+  width: 130rpx;
+  height: 60rpx;
+  background-color: #f8f8f8;
+  border-radius: 6rpx;
+  border: solid 1rpx #cbcbcb;
+}
+
+.change-img .refresh {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28rpx;
+  height: 24rpx;
+  margin-left: 25rpx;
+}
+
+.send-btn {
+  /* float: right; */
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  display: inline-block;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: #aaa;
+  border: solid 1rpx #cbcbcb;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.submit-btn {
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-image: linear-gradient(90deg, #00aeff 0%, #0078ff 100%),
+                      linear-gradient(#29a1f7, #29a1f7);
+  background-blend-mode: normal, normal;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 60rpx;
+}
+
+.submit-btn:active {
+  opacity: 0.9;
+}
+
+.tip {
+  text-align: center;
+  font-size: 26rpx;
+  color: #f06613;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 30rpx;
+}
+
+.hrloo {
+  margin-top: 130rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #b9b9b9;
+}
+
+._transform {
+  transition: All 0.4s ease-in-out;
+  -webkit-transition: All 0.4s ease-in-out;
+  -moz-transition: All 0.4s ease-in-out;
+  -o-transition: All 0.4s ease-in-out;
+}
+
+._transform:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}

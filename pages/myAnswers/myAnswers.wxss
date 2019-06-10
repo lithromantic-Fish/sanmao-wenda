@@ -1,0 +1,57 @@
+/* pages/myFollowQuestion/myFollowQuestion.wxss */
+
+.wrap {
+  background-color: #f1f2f3;
+  height: 100%;
+}
+
+.allcontent {
+  background-color: white;
+  border-bottom: 1rpx solid #e3e4e8;
+  padding: 0 30rpx;
+}
+
+.con_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 42rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.con_bot {
+  display: flex;
+  margin: 20rpx 0;
+}
+
+.con_bot text {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  line-height: 40rpx;
+}
+.loadAll{
+  padding-top: 15rpx;
+  display: flex;
+  justify-content: center;
+  width: 100%；
+  
+
+}
+.loadAll text{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  line-height:40rpx;
+}

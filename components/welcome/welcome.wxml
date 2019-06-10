@@ -1,0 +1,10 @@
+<!--components/tab/tab.wxml-->
+
+<view class='welcome {{model.iphoneX?"iphonex":""}}'>
+  <image wx:if='{{customData.headerImg}}' src='{{customData.headerImg}}' data-url="{{customData.headerLink}}" bindtap='_jump'  lazy-load="true"></image>
+  <view class='video' wx:if="{{customData.playUrl}}"><video objectFit='fill' src='{{customData.playUrl}}'></video></view>
+  <image wx:if='{{customData.product_A}}' src='{{customData.product_A}}' data-url="{{customData.productLink_A}}" bindtap='_jump' mode="widthFix" lazy-load="true"></image>
+  <image wx:if='{{customData.product_B}}' src='{{customData.product_B}}' data-url="{{customData.productLink_B}}" bindtap='_jump' mode="widthFix" lazy-load="true"></image>
+  <image wx:if='{{customData.product_C}}' src='{{customData.product_C}}' data-url="{{customData.productLink_C}}" bindtap='_jump' mode="widthFix" lazy-load="true"></image>
+  <image wx:if='{{customData.mainImg}}' src='{{customData.mainImg}}' data-url="{{customData.mainLink}}" bindtap='_jump' mode="widthFix" lazy-load="true"></image>
+</view>

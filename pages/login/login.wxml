@@ -1,0 +1,121 @@
+<!--pages/login/login.wxml-->
+<view class='containor'>
+  <block wx:if="{{PAGE}}">
+
+
+  <view class='logo'>
+    <image src='https://static.hrloo.com/hrloo56/wendamiapp/img/index_01.png'></image>
+  </view>
+  <view class="login-way">
+    <view class='ways' bindtap='_showLoginWays'>选择登录方式：<text >{{LoginWay.text}}</text> <i class="{{LoginWay.isShow?'sd':''}}"></i></view>
+    <view class='ways-list' hidden="{{!LoginWay.isShow}}">
+      <view 
+        wx:for="{{LoginWay.list}}" 
+        wx:key="index" 
+        data-login_type="{{index}}" 
+        bindtap='_selectLoginWay'
+        class='item {{item.selected?"sd":""}}'>{{item.text}}</view>
+    </view>
+  </view>
+
+  <view class='fn-area'>
+    <!-- 默认 手机验证码 登录/注册 -->
+    <block wx:if="{{LoginWay.type==0}}">
+    <view class='fn-items'>
+      <view class='fn-item mobile clearfix'>
+        <input 
+          type='number' 
+          maxlength='11' 
+          placeholder='请输入手机号码' 
+          bindinput='_interMobile' 
+          placeholder-class='p-class'></input>
+      </view>
+      <view class='fn-item msg-code bt-line clearfix'>
+        <input 
+          type='number' 
+          maxlength='5' 
+          placeholder='请输入短信验证码' 
+          bindinput='_interMsgCode' 
+          placeholder-class='p-class'></input>
+        <view class='send-btn' bindtap='toTCaptcha' >{{msgCode.text}}</view>
+      </view>
+    </view>
+    </block>
+    <!-- 手机+密码 登录 -->
+    <block wx:elif="{{LoginWay.type==1}}">
+      <view class='fn-items'>
+        <view class='fn-item mobile clearfix'>
+          <input 
+            type='number' 
+            maxlength='11' 
+            placeholder='请输入您的手机号码' 
+            bindinput='_interLoginUsername' 
+            placeholder-class='p-class'></input>
+        </view>
+        <view class='fn-item password bt-line clearfix'>
+          <input 
+            type='text' 
+            maxlength='50' 
+            password="true" 
+            placeholder='请输入账号密码' 
+            bindinput='_interPassword' 
+            placeholder-class='p-class'></input>
+        </view>
+      </view>
+    </block>
+    <!-- 学号+密码 登录 -->
+    <block wx:elif="{{LoginWay.type==2}}">
+      <view class='fn-items'>
+        <view class='fn-item student clearfix'>
+          <input 
+            type='number' 
+            maxlength='11' 
+            placeholder='请输入您的三茅学号' 
+            bindinput='_interLoginUsername' 
+            placeholder-class='p-class'></input>
+        </view>
+        <view class='fn-item password bt-line clearfix'>
+          <input 
+            type='text' 
+            maxlength='50' 
+            password="true" 
+            placeholder='请输入账号密码' 
+            bindinput='_interPassword' 
+            placeholder-class='p-class'></input>
+        </view>
+      </view>
+    </block>
+    <!-- 邮箱+密码 登录 -->
+    <block wx:elif="{{LoginWay.type==3}}">
+      <view class='fn-items'>
+        <view class='fn-item msg-code email clearfix'>
+          <input 
+            type='text' 
+            placeholder='请输入您的邮箱账号' 
+            bindinput='_interLoginUsername' 
+            placeholder-class='p-class'></input>
+        </view>
+        <view class='fn-item password bt-line clearfix'>
+          <input 
+            type='text' 
+            maxlength='50' 
+            password="true" 
+            placeholder='请输入账号密码' 
+            bindinput='_interPassword' 
+            placeholder-class='p-class'></input>
+        </view>
+      </view>
+    </block>
+    
+    <view class='submit-btn' bindtap='_Login'>{{LoginWay.type==0?'注册/登录':'登录'}}</view>
+
+    <view class='tip' ><text wx:if="{{TIP.state}}">{{TIP.text}}</text></view>
+
+    <view class='hrloo'><text>三茅人力资源网 — 专业的HR学习平台</text></view>
+
+  </view>
+
+  </block>
+</view>
+
+<fixed></fixed>

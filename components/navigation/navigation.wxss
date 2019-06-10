@@ -1,0 +1,42 @@
+/* components/navigation/navigation.wxss */
+
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  
+  background-image: linear-gradient(90deg, #00aeff 0%, #0078ff 100%),
+                      linear-gradient(#29a1f7, #29a1f7);
+  background-blend-mode: normal, normal;
+}
+
+.title-bar {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-header-btn {
+  width: 32%;
+  height: 100%;
+}
+
+.navigation-back {
+  width: 40%;
+  height: 100%;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAjCAYAAACU9ioYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQyOUU0MzAwOUVEQTExRThBODBDQzhCQ0ZCNERBODE2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQyOUU0MzAxOUVEQTExRThBODBDQzhCQ0ZCNERBODE2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDI5RTQyRkU5RURBMTFFOEE4MENDOEJDRkI0REE4MTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDI5RTQyRkY5RURBMTFFOEE4MENDOEJDRkI0REE4MTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4mqTOBAAABF0lEQVR42qzWsQrCMBAG4Ogi1NZVUHDwOXwEX9VVUau11ifoUhzEF3ATxC3eQYOlJJdcksAvNIGPNG3PE1JKEZAUcoI0kAXOhWKV/I8HorEwNZqh4I8MsoOsNGtP7s4yw85ke5ZJVIzzUJwwV5DC8i7mAiJ2c8VsIIUddRgFemEm0BvTgUFYH5wQ2MEF64JRMAVS2J6DKbCIhWEG8POFKjHqVY03ZAl5cUsRlq/KUKI2kIRd3NrbKg23XfqcoUIvMdDuhQ0dc8EoqG4yCDUtJMT7eaVQavteqO2Q2ajLq2BDUy7IQjkfvhPK7RwQPRtQ/KtNfRolCs19mqUPZA0pNGvTkP6wv9M7ZC4CO1hEt5AaMsO5nwADAAsIA9+NJkUsAAAAAElFTkSuQmCC') no-repeat 20rpx center;
+  background-size: 20rpx 35rpx;
+}
+
+.navigation-title {
+  max-width: 44%;
+	font-size: 38rpx;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

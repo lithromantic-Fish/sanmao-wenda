@@ -1,0 +1,9 @@
+<view class='wrap'>
+  <textarea class='textArea' placeholder-class='p_text' value='{{inputVal}}' placeholder='请输入回答内容' bindconfirm='confirm' bindinput='answer_text'> </textarea>
+  <form  bindsubmit="formSubmit" report-submit="true">
+  <view class='wrap_btn'>
+      <button  class='btn_submit' form-type="submit">提交</button> 
+      <view class='btn_cancle'>取消</view>
+  </view>
+  </form>
+</view>

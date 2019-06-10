@@ -1,0 +1,148 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx5d59333796e9a5bc",
+	"projectname": "HRwenda",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 14,
+			"list": [
+				{
+					"id": -1,
+					"name": "注册/登录",
+					"pathName": "pages/publishQuesion/publishQuesion",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search搜索页面",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "mine页面",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的消息",
+					"pathName": "pages/myMsg/myMsg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布问题",
+					"pathName": "pages/answerQuesion/answerQuesion",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "回答问题",
+					"pathName": "pages/answerQuesionText/answerQuesionText",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "问题",
+					"pathName": "pages/publishQuesion/publishQuesion",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "内页",
+					"pathName": "pages/questionDetail/questionDetail",
+					"query": "id=4824842",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "评论内页",
+					"pathName": "pages/questionDetail/questionDetail",
+					"query": "id=4824842",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "录音",
+					"pathName": "pages/answerQuesion/answerQuesion",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我关注的问题",
+					"pathName": "pages/myFollowQuestion/myFollowQuestion",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的消息",
+					"pathName": "pages/myMsg/myMsg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我关注的问题",
+					"pathName": "pages/myFollowQuestion/myFollowQuestion",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "111",
+					"pathName": "pages/questionDetail/questionDetail",
+					"query": "id=1343328",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "2222",
+					"pathName": "pages/questionDetail/questionDetail",
+					"query": "id=4985984",
+					"scene": null
+				}
+			]
+		}
+	}
+}

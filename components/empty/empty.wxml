@@ -1,0 +1,6 @@
+<!--components/empty/empty.wxml-->
+<view class='empty'>
+  <image src='https://static.hrloo.com/hrloo56/wendamiapp/img/ic_null.png'></image>
+  <view><text>{{text}}</text></view>
+</view>
+

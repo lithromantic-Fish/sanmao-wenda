@@ -1,0 +1,28 @@
+<view class="wrap">
+  <view class='message_tz'>
+    <text class='text_tz'>通知列表</text>
+    <view catchtap='allRead'>
+      <text class='text_yd' >全部已读</text>
+      <image src='https://static.hrloo.com/hrloo56/wendamiapp/img/ic_allRead.png'></image>
+    </view>
+  </view>
+  <view wx:for="{{followList}}" data-item='{{item}}' class='allcontent' wx:key="{{index}}" catchtap='toMsgPage'>
+    <view class='con_wrap '>
+      <view class='flex'>
+        <image class='avator' src='{{item.avaUrl}}'></image>
+        <view class='redDos'wx:if="{{item.status==1}}"></view>
+      </view>
+      <view style='padding-left:20rpx;'>
+        <view class='up_v'>
+          <text class='nickname'>{{item.nickname}}</text>
+        </view>
+        <view class='flex-dec'>
+          <text class='time'>{{item.dateline}}</text>
+          <text class='content'>{{item.subject}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+<empty wx:if="{{!followList}}"></empty>
+
+</view>

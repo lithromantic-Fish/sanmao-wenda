@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "三茅问答",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "search": "/components/search/search",
+    "tab": "/components/tab/tab",
+    "empty": "/components/empty/empty",
+    "qaList": "/components/qaList/qaList"
+  }
+}

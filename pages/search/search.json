@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "搜索",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "search": "/components/search/search",
+    "empty": "/components/empty/empty",
+    "qaList": "/components/qaList/qaList"
+  }
+}

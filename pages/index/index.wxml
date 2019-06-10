@@ -1,0 +1,32 @@
+<!-- container -->
+<block wx:if="{{PAGE}}">
+  <search catchtap="_goToSearch" isIndex="true"></search>
+  <view class='wrap_tabs'>
+    <view class='{{tabs==1?"active":"flex_item "}}' catchtap='recommend'>推荐</view>
+    <view class='{{tabs==2?"active":"flex_item "}}' catchtap='hot'>最热</view>
+    <view class='{{tabs==3?"active":"flex_item "}}' catchtap='unsettled'>待解决</view>
+  </view>
+  <!-- 推荐 -->
+  <view wx:if="{{tabs==1}}" style='padding-bottom:100rpx'>
+    <view  style='margin-bottom:20rpx;'>
+      <qaList qaList="{{qaList}}" tab="1"></qaList>
+    </view>
+  </view>
+  <!-- 最热 -->
+  <view wx:if="{{tabs==2}}" style='padding-bottom:100rpx'>
+    <view  style='margin-bottom:20rpx;'>
+        <qaList qaList="{{qaList}}" tab="2"></qaList>
+      </view>
+  </view>
+  <!-- 待解决 -->
+  <view wx:if="{{tabs==3}}" style='padding-bottom:100rpx'>
+     <view  style='margin-bottom:20rpx;'>
+      <qaList qaList="{{qaList}}" tab="3"></qaList>
+    </view>
+
+  </view>
+</block>
+
+<tab tabIndex="1"></tab>
+
+<empty wx:if="{{qaList.length==0}}"></empty>

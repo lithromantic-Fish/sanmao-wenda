@@ -1,0 +1,20 @@
+<!--components/navigation/navigation.wxml-->
+<!-- <view class="nav-header " style="height:{{statusBarHeight+titleBarHeight}}px">
+  <view class="status-bar" style="height:{{statusBarHeight}}px"></view>
+  <view class="title-bar" style="height:{{titleBarHeight}}px">
+    <view class='nav-header-btn'>
+      <view 
+        class='navigation-back' 
+        wx:if="{{isShowBack}}"
+        bindtap='_back'>
+      </view>
+    </view>    
+    <view 
+      class='navigation-title' 
+      wx:if="{{isShowTitle}}" >
+      {{navigationTitle}}
+    </view>
+    <view class='nav-header-btn'></view>
+  </view>
+</view>
+<view class='' style="height:{{statusBarHeight+titleBarHeight}}px"></view> -->

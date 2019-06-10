@@ -1,0 +1,8 @@
+<view class='showloadingMaskZ'>
+  <view class='showloading'>
+    <view class='showloading_k'>
+      <image src='/images/ic_say.gif'></image>
+      <text>上滑取消</text>
+    </view>
+  </view>
+</view>    
