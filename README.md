@@ -5,7 +5,7 @@
 
 ## 扫码体验
 
-<img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/4.gif" width="200px">
+<img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/4.jpg" width="200px">
 
 ### 项目截图
 ![img](https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/1.gif)
