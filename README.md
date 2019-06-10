@@ -10,6 +10,8 @@
 ### 项目截图
 ![img](https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/1.gif)
 
+<img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/3.jpg" width="380px">
+
 <img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/2.jpg" width="380px">
 
 ### 功能列表
