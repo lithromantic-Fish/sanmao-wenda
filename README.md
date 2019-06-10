@@ -1,6 +1,3 @@
-# sanmao-wenda
-三茅问答小程序----语音回答
-
 ## 微信小程序问答
 <a href="http://www.hrloo.com/qa">三茅网</a> 独立出来的微信小程序端
 
