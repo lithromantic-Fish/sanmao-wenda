@@ -17,7 +17,6 @@
 + 个人中心（我关注的问题、我的提问、我的消息、我的回答、关于）
 ....
 
- tree [目录] 
 ### 项目截图
 ![img](https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/1.gif)
 
