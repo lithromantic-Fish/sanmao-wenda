@@ -3,7 +3,7 @@
 
 **注意：当前版本功能还未完善，请勿商用。**
 
-## 扫码体验
+### 扫码体验
 
 <img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/4.jpg" width="200px">
 
