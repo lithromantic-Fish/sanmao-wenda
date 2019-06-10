@@ -5,7 +5,7 @@
 
 ## 扫码体验
 
-<img src="https://cdn.it120.cc/apifactory/2017/09/15/487409738ebb80c44eda01c46d59b20c.jpg" width="200px">
+<img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/4.gif" width="200px">
 
 ### 项目截图
 ![img](https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/1.gif)
