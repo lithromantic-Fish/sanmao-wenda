@@ -7,7 +7,7 @@
 
 <img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/4.jpg" width="200px">
 
-## 其他开源模板
+### 其他开源版本
 
 | 三茅百万hr通讯录 |
 | :------: |
