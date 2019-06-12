@@ -1,5 +1,5 @@
 ## 微信小程序问答
-<a href="http://www.hrloo.com/qa">三茅网</a> 独立出来的微信小程序端
+<a href="http://www.hrloo.com/qa">三茅网</a> PC端划分的微信小程序端
 
 **注意：当前版本仅供学习交流，请勿商用。**
 
