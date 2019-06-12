@@ -9,9 +9,9 @@
 
 ## 其他开源模板
 
-| 舔果果小铺 |
+| 三茅百万hr通讯录 |
 | :------: |
-| <img src="https://cdn.it120.cc/apifactory/2018/04/01/b7b8f5a0fcfc72454ade8510ab929717.jpg" width="200px"> 
+| <img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/5.jpg" width="200px"> 
 | [开源地址](https://github.com/qindiandadudu/TianguoguoXiaopu)
 
 ### 功能列表
