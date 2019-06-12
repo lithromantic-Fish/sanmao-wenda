@@ -25,7 +25,7 @@
 + 个人中心（我关注的问题、我的提问、我的消息、我的回答、关于）
 ....
 
-### 项目截图
+### 项目截图(此环境为开发环境，数据以线上为准)
 ![img](https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/1.gif)
 
 <img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/3.jpg" width="380px">
