@@ -7,6 +7,13 @@
 
 <img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/4.jpg" width="200px">
 
+## 其他开源模板
+
+| 舔果果小铺 |
+| :------: |
+| <img src="https://cdn.it120.cc/apifactory/2018/04/01/b7b8f5a0fcfc72454ade8510ab929717.jpg" width="200px"> 
+| [开源地址](https://github.com/qindiandadudu/TianguoguoXiaopu)
+
 ### 功能列表
 + 推荐、最热、待解决问答首页
 + 问答详情页面，包含关注问题、点赞问题、点赞评论、回复评论、展开更多功能
