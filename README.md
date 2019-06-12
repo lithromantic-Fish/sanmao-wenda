@@ -12,7 +12,7 @@
 | 三茅百万hr通讯录 |
 | :------: |
 | <img src="https://github.com/lithromantic-Fish/sanmao-wenda/blob/master/images/5.jpg" width="200px"> 
-| [开源地址](https://github.com/qindiandadudu/TianguoguoXiaopu)
+| [开源地址](https://github.com/lithromantic-Fish/sanmao-HRhome)
 
 ### 功能列表
 + 推荐、最热、待解决问答首页
